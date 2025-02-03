@@ -83,11 +83,11 @@ if uploaded_file is not None:
 
     # Check if features exist or extract new ones
     if image_name in features:
-        image_feature = features[image_name].reshape((1, 2048))
+        image_feature = features[image_name].reshape((1, 1920))
     else:
         image_feature = extract_features(image)
 
     # Generate caption
     caption = beam_search(model, tokenizer, image_feature, beam_width=5)
     st.subheader("Generated Caption:")
-    st.write(caption)
+    st.write(caption)   
