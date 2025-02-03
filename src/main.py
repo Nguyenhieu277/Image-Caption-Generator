@@ -39,7 +39,7 @@ def extract_features(img):
     feature = feature_extractor.predict(img_array)
     return feature.reshape((1, 1920))
 
-def beam_search(model, tokenizer, feature, beam_width = 3, max_length = 34):
+def beam_search(model, tokenizer, feature, beam_width = 3, max_length = 40):
     start_seq = "<start>"
     sequences = [(start_seq, 0.0)]
 
