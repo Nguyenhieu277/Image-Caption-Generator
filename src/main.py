@@ -91,6 +91,6 @@ if uploaded_file is not None:
         image_feature = extract_features(image)
 
     # Generate caption
-    caption = beam_search(model, tokenizer, image_feature, beam_width=3)
+    caption = beam_search(model, tokenizer, image_feature, beam_width=5)
     st.subheader("Generated Caption:")
     st.write(caption)   
