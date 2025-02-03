@@ -31,13 +31,15 @@ def load_extract_features():
     return model
 
 feature_extractor = load_extract_features()
-def extract_features(img_path):
-    img = image.load_img(img_path, target_size=(224, 224))
-    img_array = image.img_to_array(img)
-    img_array = np.expand_dims(img_array, axis=0)  # Thêm batch dimension
+def extract_features(image):
+    img = image.resize((224, 224))  
+    img_array = np.array(img)  
+    img_array = np.expand_dims(img_array, axis=0) 
     img_array = preprocess_input(img_array) 
+
     feature = feature_extractor.predict(img_array)
     return feature.reshape((1, 1920))
+
 
 def beam_search(model, tokenizer, feature, beam_width = 3, max_length = 40):
     start_seq = "<start>"
