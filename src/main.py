@@ -7,7 +7,8 @@ from nltk.translate.bleu_score import sentence_bleu
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from PIL import Image
-from tensorflow.keras.applications.densenet201 import DenseNet201, preprocess_input
+from tensorflow.keras.applications import DenseNet201
+from tensorflow.keras.applications.densenet import preprocess_input
 from tensorflow.keras.models import Model
 
 
