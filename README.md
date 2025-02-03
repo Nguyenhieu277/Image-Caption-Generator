@@ -51,7 +51,8 @@ image-caption-generator/
 - **Feature Extraction:** Uses DenseNet201 to extract image features.
 - **Caption Generation:** Uses a trained LSTM model to generate captions.
 - **Beam Search:** Improves the caption quality by considering multiple possible sequences.
-
+## Demo
+`https://flickr8k.streamlit.app/`
 ## ⚡ Common Issues & Fixes
 ### 1. `No module named streamlit`
 Run:
