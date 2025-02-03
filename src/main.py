@@ -14,10 +14,10 @@ from tensorflow.keras.models import Model
 
 @st.cache_resource
 def load_files():
-    with open('./trained_model/tokenizer.pkl', 'rb') as f:
+    with open('/mount/src/flickr8k/trained_model/tokenizer.pkl', 'rb') as f:
         tokenizer = pickle.load(f)
-    model = load_model('./trained_model/caption_imgs.keras')
-    with open('./trained_model/features.pkl', 'rb') as f:
+    model = load_model('/mount/src/flickr8k/trained_model/caption_imgs.keras')
+    with open('/mount/src/flickr8k/trained_model/features.pkl', 'rb') as f:
         features = pickle.load(f)
     
     return tokenizer, model, features
